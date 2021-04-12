@@ -28,6 +28,8 @@ public class ProfileFragment extends Fragment {
     private String mParam2;
 
     public ProfileFragment() {
+
+
         // Required empty public constructor
     }
 
@@ -65,4 +67,6 @@ public class ProfileFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_profile, container, false);
     }
+
+
 }
