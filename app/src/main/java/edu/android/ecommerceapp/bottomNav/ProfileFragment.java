@@ -1,14 +1,19 @@
 package edu.android.ecommerceapp.bottomNav;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Lifecycle;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import edu.android.ecommerceapp.R;
+import edu.android.ecommerceapp.SettingsActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -26,6 +31,8 @@ public class ProfileFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+
 
     public ProfileFragment() {
 
@@ -69,4 +76,8 @@ public class ProfileFragment extends Fragment {
     }
 
 
+    public void setting(View view) {
+        Intent i = new Intent(ProfileFragment.this, SettingsActivity.class);
+        startActivity(i);
+    }
 }
