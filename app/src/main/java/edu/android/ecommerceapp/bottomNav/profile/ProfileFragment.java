@@ -1,16 +1,17 @@
-package edu.android.ecommerceapp.bottomNav;
+package edu.android.ecommerceapp.bottomNav.profile;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
-import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Lifecycle;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import edu.android.ecommerceapp.R;
 import edu.android.ecommerceapp.SettingsActivity;
@@ -21,6 +22,9 @@ import edu.android.ecommerceapp.SettingsActivity;
  * create an instance of this fragment.
  */
 public class ProfileFragment extends Fragment {
+
+    public String[] settingItems = {"Edit Profile Pic", "Edit Username", "Change Password","Change Email"};
+    ListView profileList ;
 
 
     // TODO: Rename parameter arguments, choose names that match
@@ -72,12 +76,17 @@ public class ProfileFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile, container, false);
+        View root = inflater.inflate(R.layout.fragment_profile, container, false);
+        profileList = (ListView)root.findViewById(R.id.profileListView);
+        profileList.setAdapter(new ProfileAdapter(getContext(),settingItems));
+        return root;
     }
 
 
     public void setting(View view) {
-        Intent i = new Intent(ProfileFragment.this, SettingsActivity.class);
+        Intent i = new Intent(getContext(), SettingsActivity.class);
         startActivity(i);
     }
+
+
 }
