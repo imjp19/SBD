@@ -2,4 +2,7 @@
     android:width="3240dp"
     android:height="3240dp"
     android:viewportWidth="3240"
-    android:viewportHeight="3240" />
+    android:viewportHeight="3240"
+     >
+
+</vector>
