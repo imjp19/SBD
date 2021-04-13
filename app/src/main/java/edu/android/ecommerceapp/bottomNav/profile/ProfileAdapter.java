@@ -20,7 +20,7 @@ public class ProfileAdapter extends BaseAdapter {
 
     public ProfileAdapter(Context context, String[] settingItems) {
         this.context = context;
-        this.settingItems = settingItems;
+        this.settingItems = settingItems; 
     }
 
     @Override
@@ -38,7 +38,6 @@ public class ProfileAdapter extends BaseAdapter {
     public long getItemId(int position) {
         return 0;
     }
-
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
